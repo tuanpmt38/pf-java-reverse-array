@@ -29,7 +29,15 @@ public class ReverseArray {
             array[j] = array[size - 1 - j];
             array[size - 1 - j] = temp;
         }
-        //array befor reverse
+//        c2
+//        for (int i = 0; i < array.length; i++)
+//        for (int j = array.length - 1; j > 1; j--) {
+//            int temp = array[j];
+//            array[j] = array[j - 1];
+//            array[j - 1] = temp;
+//
+//        }
+        //array before reverse
         System.out.printf("%-20s%s", "Array: ", "");
         for (int j = 0; j < array.length; j++) {
             System.out.print(array[j] + "\t");
