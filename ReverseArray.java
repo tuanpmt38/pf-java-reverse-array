@@ -15,7 +15,7 @@ public class ReverseArray {
         //input element array
         array = new int[size];
         for (int i = 0; i < array.length; i++) {
-            System.out.print("Enter element" + (i) + ":");
+            System.out.print("Enter element" + (i) + " :");
             array[i] = sc.nextInt();
         }
         //display array
@@ -24,19 +24,19 @@ public class ReverseArray {
             System.out.print(array[j] + "\t");
         }
         //reverse array
-        for (int j = 0; j < array.length / 2; j++) {
-            int temp = array[j];
-            array[j] = array[size - 1 - j];
-            array[size - 1 - j] = temp;
-        }
-//        c2
-//        for (int i = 0; i < array.length; i++)
-//        for (int j = array.length - 1; j > 1; j--) {
+//        for (int j = 0; j < array.length / 2; j++) {
 //            int temp = array[j];
-//            array[j] = array[j - 1];
-//            array[j - 1] = temp;
-//
+//            array[j] = array[size - 1 - j];
+//            array[size - 1 - j] = temp;
 //        }
+       // c2
+        for (int i = 0; i < array.length; i++)
+        for (int j = array.length - 1; j > i; j--) {
+            int temp = array[j];
+            array[j] = array[j - 1];
+            array[j - 1] = temp;
+
+        }
         //array before reverse
         System.out.printf("%-20s%s", "Array: ", "");
         for (int j = 0; j < array.length; j++) {
